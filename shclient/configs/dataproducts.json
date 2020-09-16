@@ -1,0 +1,770 @@
+[
+  {
+    "@id": "https://services.sentinel-hub.com/configuration/v1/datasets/S1GRD/dataproducts/430",
+    "id": 430,
+    "name": "VV",
+    "description": "VV - linear visualization from 0 to 0.5",
+    "evalScript": "\nfunction evaluatePixel(samples) {\n    return [samples.VV * 2, samples.dataMask];\n}\n\nfunction setup() {\n  return {\n    input: [\"VV\", \"dataMask\"],\n    output: { bands: 2 }\n  };\n}",
+    "dataset": {
+      "@id": "https://services.sentinel-hub.com/configuration/v1/datasets/S1GRD"
+    },
+    "baseProduct": "VV",
+    "visualization": "LINEAR"
+  },
+  {
+    "@id": "https://services.sentinel-hub.com/configuration/v1/datasets/S1GRD/dataproducts/431",
+    "id": 431,
+    "name": "HH",
+    "description": "HH - linear visualization from 0 to 0.5",
+    "evalScript": "\nfunction evaluatePixel(samples) {\n    return [samples.HH * 2, samples.dataMask];\n}\n\nfunction setup() {\n  return {\n    input: [\"HH\", \"dataMask\"],\n    output: { bands: 2 }\n  };\n}",
+    "dataset": {
+      "@id": "https://services.sentinel-hub.com/configuration/v1/datasets/S1GRD"
+    },
+    "baseProduct": "HH",
+    "visualization": "LINEAR"
+  },
+  {
+    "@id": "https://services.sentinel-hub.com/configuration/v1/datasets/S1GRD/dataproducts/432",
+    "id": 432,
+    "name": "VH",
+    "description": "VH - linear visualization from 0 to 0.5",
+    "evalScript": "\nfunction evaluatePixel(samples) {\n    return [samples.VH * 2, samples.dataMask];\n}\n\nfunction setup() {\n  return {\n    input: [\"VH\", \"dataMask\"],\n    output: { bands: 2 }\n  };\n}",
+    "dataset": {
+      "@id": "https://services.sentinel-hub.com/configuration/v1/datasets/S1GRD"
+    },
+    "baseProduct": "VH",
+    "visualization": "LINEAR"
+  },
+  {
+    "@id": "https://services.sentinel-hub.com/configuration/v1/datasets/S1GRD/dataproducts/433",
+    "id": 433,
+    "name": "HV",
+    "description": "HV - linear visualization from 0 to 0.5",
+    "evalScript": "\nfunction evaluatePixel(samples) {\n    return [samples.HV * 2, samples.dataMask];\n}\n\nfunction setup() {\n  return {\n    input: [\"HV\", \"dataMask\"],\n    output: { bands: 2 }\n  };\n}",
+    "dataset": {
+      "@id": "https://services.sentinel-hub.com/configuration/v1/datasets/S1GRD"
+    },
+    "baseProduct": "HV",
+    "visualization": "LINEAR"
+  },
+  {
+    "@id": "https://services.sentinel-hub.com/configuration/v1/datasets/S1GRD/dataproducts/434",
+    "id": 434,
+    "name": "VV [dB]",
+    "description": "VV - decibel visualization from -20 dB to 0 dB",
+    "evalScript": "\nfunction evaluatePixel(samples) {\n    return [[Math.max(0, Math.log(samples.VV) * 0.21714724095 + 1)] * 2, samples.dataMask];\n}\n\nfunction setup() {\n  return {\n    input: [\"VV\", \"dataMask\"],\n    output: { bands: 2 }\n  };\n}",
+    "dataset": {
+      "@id": "https://services.sentinel-hub.com/configuration/v1/datasets/S1GRD"
+    },
+    "baseProduct": "VV",
+    "visualization": "DECIBEL"
+  },
+  {
+    "@id": "https://services.sentinel-hub.com/configuration/v1/datasets/S1GRD/dataproducts/435",
+    "id": 435,
+    "name": "HH [dB]",
+    "description": "HH - decibel visualization from -20 dB to 0 dB",
+    "evalScript": "\nfunction evaluatePixel(samples) {\n    return [[Math.max(0, Math.log(samples.HH) * 0.21714724095 + 1)] * 2, samples.dataMask];\n}\n\nfunction setup() {\n  return {\n    input: [\"HH\", \"dataMask\"],\n    output: { bands: 2 }\n  };\n}",
+    "dataset": {
+      "@id": "https://services.sentinel-hub.com/configuration/v1/datasets/S1GRD"
+    },
+    "baseProduct": "HH",
+    "visualization": "DECIBEL"
+  },
+  {
+    "@id": "https://services.sentinel-hub.com/configuration/v1/datasets/S1GRD/dataproducts/436",
+    "id": 436,
+    "name": "VH [dB]",
+    "description": "VH - decibel visualization from -20 dB to 0 dB",
+    "evalScript": "\nfunction evaluatePixel(samples) {\n    return [[Math.max(0, Math.log(samples.VH) * 0.21714724095 + 1)] * 2, samples.dataMask];\n}\n\nfunction setup() {\n  return {\n    input: [\"VH\", \"dataMask\"],\n    output: { bands: 2 }\n  };\n}",
+    "dataset": {
+      "@id": "https://services.sentinel-hub.com/configuration/v1/datasets/S1GRD"
+    },
+    "baseProduct": "VH",
+    "visualization": "DECIBEL"
+  },
+  {
+    "@id": "https://services.sentinel-hub.com/configuration/v1/datasets/S1GRD/dataproducts/437",
+    "id": 437,
+    "name": "HV [dB]",
+    "description": "HV - decibel visualization from -20 dB to 0 dB",
+    "evalScript": "\nfunction evaluatePixel(samples) {\n    return [[Math.max(0, Math.log(samples.HV) * 0.21714724095 + 1)] * 2, samples.dataMask];\n}\n\nfunction setup() {\n  return {\n    input: [\"HV\", \"dataMask\"],\n    output: { bands: 2 }\n  };\n}",
+    "dataset": {
+      "@id": "https://services.sentinel-hub.com/configuration/v1/datasets/S1GRD"
+    },
+    "baseProduct": "HV",
+    "visualization": "DECIBEL"
+  },
+  {
+    "@id": "https://services.sentinel-hub.com/configuration/v1/datasets/S2L1C/dataproducts/326",
+    "id": 326,
+    "name": "RGB_11_8_2.RGB",
+    "description": "Agriculture - RGB visualization. - Based on bands: [B11, B08, B02]",
+    "evalScript": "//VERSION=3\nlet minVal = 0.0;\nlet maxVal = 0.4;\n\nlet viz = new HighlightCompressVisualizer(minVal, maxVal);\n\nfunction evaluatePixel(samples) {\n    let val = [samples.B11, samples.B08, samples.B02, samples.dataMask];\n    return val.map(v => viz.process(v));\n}\n\nfunction setup() {\n  return {\n    input: [\"B11\", \"B08\", \"B02\", \"dataMask\"],\n    output: { bands: 4 }\n  };\n}\n",
+    "dataset": {
+      "@id": "https://services.sentinel-hub.com/configuration/v1/datasets/S2L1C"
+    },
+    "baseProduct": "RGB_11_8_2",
+    "visualization": "RGB"
+  },
+  {
+    "@id": "https://services.sentinel-hub.com/configuration/v1/datasets/S2L1C/dataproducts/6",
+    "id": 6,
+    "name": "FALSE_COLOR.RGB",
+    "description": "False color - RGB visualization.",
+    "evalScript": "\nlet minVal = 0.0;\nlet maxVal = 0.4;\n\nlet viz = new HighlightCompressVisualizer(minVal, maxVal);\n\nfunction evaluatePixel(samples) {\n    let val = [samples.B08, samples.B04, samples.B03, samples.dataMask];\n    return val.map((v, i) => viz.process(v, i));\n}\n\nfunction setup() {\n  return {\n    input: [\"B03\", \"B04\", \"B08\", \"dataMask\"],\n    output: { bands: 4 }\n  };\n}\n",
+    "dataset": {
+      "@id": "https://services.sentinel-hub.com/configuration/v1/datasets/S2L1C"
+    },
+    "baseProduct": "FALSE_COLOR",
+    "visualization": "RGB"
+  },
+  {
+    "@id": "https://services.sentinel-hub.com/configuration/v1/datasets/S2L1C/dataproducts/420",
+    "id": 420,
+    "name": "RGB_12_11_4.RGB",
+    "description": "False Color (Urban) - RGB visualization - based on bands [B12, B11, B04]",
+    "evalScript": "\nlet minVal = 0.0;\nlet maxVal = 0.4;\n\nlet viz = new HighlightCompressVisualizer(minVal, maxVal);\n\nfunction evaluatePixel(samples) {\n    let val = [samples.B12, samples.B11, samples.B04, samples.dataMask];\n    return val.map((v, i) => viz.process(v, i));\n}\n\nfunction setup() {\n  return {\n    input: [\"B12\", \"B11\", \"B04\", \"dataMask\"],\n    output: { bands: 4 }\n  };\n}\n",
+    "dataset": {
+      "@id": "https://services.sentinel-hub.com/configuration/v1/datasets/S2L1C"
+    },
+    "baseProduct": "RGB_12_11_4",
+    "visualization": "RGB"
+  },
+  {
+    "@id": "https://services.sentinel-hub.com/configuration/v1/datasets/S2L1C/dataproducts/256",
+    "id": 256,
+    "name": "NDVI.COLOR_MAP",
+    "description": "NDVI (Normalized Difference Vegetation Index) - COLOR_MAP",
+    "evalScript": "\nlet viz = ColorMapVisualizer.createDefaultColorMap();\n\nfunction evaluatePixel(samples) {\n    let val = index(samples.B08, samples.B04);\n    return viz.process(val);\n}\n\nfunction setup() {\n  return {\n    input: [\"B04\", \"B08\", \"dataMask\"],\n    output: { bands: 4 }\n  };\n}\n",
+    "dataset": {
+      "@id": "https://services.sentinel-hub.com/configuration/v1/datasets/S2L1C"
+    },
+    "baseProduct": "NDVI",
+    "visualization": "COLOR_MAP"
+  },
+  {
+    "@id": "https://services.sentinel-hub.com/configuration/v1/datasets/S2L1C/dataproducts/284",
+    "id": 284,
+    "name": "RGB_4_3_1.RGB",
+    "description": "Bathymetric - RGB visualization. - Based on bands: [B04, B03, B01]",
+    "evalScript": "\nlet minVal = 0.0;\nlet maxVal = 0.4;\n\nlet viz = new HighlightCompressVisualizer(minVal, maxVal);\n\nfunction evaluatePixel(samples) {\n    let val = [samples.B04, samples.B03, samples.B01, samples.dataMask];\n    return val.map(v => viz.process(v));\n}\n\nfunction setup() {\n  return {\n    input: [\"B01\", \"B03\", \"B04\", \"dataMask\"],\n    output: { bands: 4 }\n  };\n}\n",
+    "dataset": {
+      "@id": "https://services.sentinel-hub.com/configuration/v1/datasets/S2L1C"
+    },
+    "baseProduct": "RGB_4_3_1",
+    "visualization": "RGB"
+  },
+  {
+    "@id": "https://services.sentinel-hub.com/configuration/v1/datasets/S2L1C/dataproducts/422",
+    "id": 422,
+    "name": "RGB_12_4_2.RGB",
+    "description": "Geology - RGB visualization - based on bands [B12, B04, B02]",
+    "evalScript": "\nlet minVal = 0.0;\nlet maxVal = 0.4;\n\nlet viz = new HighlightCompressVisualizer(minVal, maxVal);\n\nfunction evaluatePixel(samples) {\n    let val = [samples.B12, samples.B04, samples.B02, samples.dataMask];\n    return val.map(v => viz.process(v));\n}\n\nfunction setup() {\n  return {\n    input: [\"B12\", \"B04\", \"B02\", \"dataMask\"],\n    output: { bands: 4 }\n  };\n}\n",
+    "dataset": {
+      "@id": "https://services.sentinel-hub.com/configuration/v1/datasets/S2L1C"
+    },
+    "baseProduct": "RGB_12_4_2",
+    "visualization": "RGB"
+  },
+  {
+    "@id": "https://services.sentinel-hub.com/configuration/v1/datasets/S2L1C/dataproducts/425",
+    "id": 425,
+    "name": "MOISTURE_INDEX.MOISTURE",
+    "description": "Moisture Index - Moisture color gradient visualization",
+    "evalScript": "\nlet index = (B8A - B11)/(B8A + B11);\n\nreturn colorBlend(index, [-0.8, -0.24, -0.032, 0.032, 0.24, 0.8], [[0.5,0,0], [1,0,0], [1,1,0], [0,1,1], [0,0,1], [0,0,0.5]]);\n",
+    "dataset": {
+      "@id": "https://services.sentinel-hub.com/configuration/v1/datasets/S2L1C"
+    },
+    "baseProduct": "MOISTURE_INDEX",
+    "visualization": "MOISTURE"
+  },
+  {
+    "@id": "https://services.sentinel-hub.com/configuration/v1/datasets/S2L1C/dataproducts/426",
+    "id": 426,
+    "name": "RGB_12_8A_4.RGB",
+    "description": "SWIR - RGB visualization - Based on bands: [B12, B8A, B04]",
+    "evalScript": "\nlet minVal = 0.0;\nlet maxVal = 0.4;\n\nlet viz = new HighlightCompressVisualizer(minVal, maxVal);\n\nfunction evaluatePixel(samples) {\n    let val = [samples.B12, samples.B8A, samples.B04, samples.dataMask];\n    return val.map(v => viz.process(v));\n}\n\nfunction setup() {\n  return {\n    input: [\"B12\", \"B8A\", \"B04\", \"dataMask\"],\n    output: { bands: 4 }\n  };\n}\n",
+    "dataset": {
+      "@id": "https://services.sentinel-hub.com/configuration/v1/datasets/S2L1C"
+    },
+    "baseProduct": "RGB_12_8A_4",
+    "visualization": "RGB"
+  },
+  {
+    "@id": "https://services.sentinel-hub.com/configuration/v1/datasets/S2L1C/dataproducts/84",
+    "id": 84,
+    "name": "TRUE_COLOR.RGB",
+    "description": "TRUE COLOR - True color image by mapping the red, green and blue input bands. Value = B04,B03,B02 - RGB visualization.",
+    "evalScript": "//VERSION=3\nlet minVal = 0.0;\nlet maxVal = 0.4;\n\nlet viz = new HighlightCompressVisualizer(minVal, maxVal);\n\nfunction evaluatePixel(samples) {\n    let val = [samples.B04, samples.B03, samples.B02, samples.dataMask];\n    return val.map((v, i) => viz.process(v, i));\n}\n\nfunction setup() {\n  return {\n    input: [\"B02\", \"B03\", \"B04\", \"dataMask\"],\n    output: { bands: 4 }\n  };\n}\n",
+    "dataset": {
+      "@id": "https://services.sentinel-hub.com/configuration/v1/datasets/S2L1C"
+    },
+    "baseProduct": "TRUE_COLOR",
+    "visualization": "RGB"
+  },
+  {
+    "@id": "https://services.sentinel-hub.com/configuration/v1/datasets/S3OLCI/dataproducts/578",
+    "id": 578,
+    "name": "TRUE_COLOR.RGB",
+    "description": "Standard true color; B08,B06,B04",
+    "evalScript": "let minVal = 0.0;\nlet maxVal = 0.4;\n\nlet viz = new HighlightCompressVisualizer(minVal, maxVal);\n\nfunction evaluatePixel(samples) {\n    let val = [samples[0].B08, samples[0].B06, samples[0].B04];\n    return val.map(v => viz.process(v));\n}\n\nfunction setup(ds) {\n    setInputComponents([ds.B08, ds.B06, ds.B04]);\n    setOutputComponentCount(3);\n}",
+    "dataset": {
+      "@id": "https://services.sentinel-hub.com/configuration/v1/datasets/S3OLCI"
+    },
+    "baseProduct": "TRUE_COLOR",
+    "visualization": "RGB"
+  },
+  {
+    "@id": "https://services.sentinel-hub.com/configuration/v1/datasets/S3OLCI/dataproducts/587",
+    "id": 587,
+    "name": "RGB_17_5_2.RGB",
+    "description": "A false color visualization of the 17,5,2 bands",
+    "evalScript": "let minVal = 0.0;\nlet maxVal = 0.8;\n\nlet viz = new HighlightCompressVisualizer(minVal, maxVal);\n\nfunction evaluatePixel(samples) {\n    let val = [samples[0].B17, samples[0].B05, samples[0].B02];\n    return val.map(v => viz.process(v));\n}\n\nfunction setup(ds) {\n    setInputComponents([ds.B17, ds.B05, ds.B02]);\n    setOutputComponentCount(3);\n}",
+    "dataset": {
+      "@id": "https://services.sentinel-hub.com/configuration/v1/datasets/S3OLCI"
+    },
+    "baseProduct": "RGB_17_5_2",
+    "visualization": "RGB"
+  },
+  {
+    "@id": "https://services.sentinel-hub.com/configuration/v1/datasets/S3OLCI/dataproducts/588",
+    "id": 588,
+    "name": "RGB_17_6_3.RGB",
+    "description": "A false color visualization of the 17,6,3 bands",
+    "evalScript": "let minVal = 0.0;\nlet maxVal = 0.8;\n\nlet viz = new HighlightCompressVisualizer(minVal, maxVal);\n\nfunction evaluatePixel(samples) {\n    let val = [samples[0].B17, samples[0].B06, samples[0].B03];\n    return val.map(v => viz.process(v));\n}\n\nfunction setup(ds) {\n    setInputComponents([ds.B17, ds.B06, ds.B03]);\n    setOutputComponentCount(3);\n}",
+    "dataset": {
+      "@id": "https://services.sentinel-hub.com/configuration/v1/datasets/S3OLCI"
+    },
+    "baseProduct": "RGB_17_6_3",
+    "visualization": "RGB"
+  },
+  {
+    "@id": "https://services.sentinel-hub.com/configuration/v1/datasets/S3OLCI/dataproducts/589",
+    "id": 589,
+    "name": "OTCI.RGB",
+    "description": "An RGB visualization of OTCI (OLCI  Terrestrial  Chlorophyll  Index )",
+    "evalScript": "var val = (B12-B11)/(B11-B10);\n\nif (val<-1.0) return [0,0,0];\nelse if (val<0.6) return [0.75,0.75,0.75];\nelse if (val<0.8) return [0.86,0.86,0.86];\nelse if (val<1.0) return [1,1,0.88];\nelse if (val<1.05) return [1,0.98,0.8];\nelse if (val<1.1) return [0.93,0.91,0.71];\nelse if (val<1.15) return [0.87,0.85,0.61];\nelse if (val<1.2) return [0.8,0.78,0.51];\nelse if (val<1.25) return [0.74,0.72,0.42];\nelse if (val<1.3) return [0.69,0.76,0.38];\nelse if (val<1.35) return [0.64,0.8,0.35];\nelse if (val<1.4) return [0.57,0.75,0.32];\nelse if (val<1.5) return [0.5,0.7,0.28];\nelse if (val<1.6) return [0.44,0.64,0.25];\nelse if (val<1.7) return [0.38,0.59,0.21];\nelse if (val<1.8) return [0.31,0.54,0.18];\nelse if (val<1.9) return [0.25,0.49,0.14];\nelse if (val<2.0) return [0.19,0.43,0.11];\nelse if (val<2.1) return [0.13,0.38,0.07];\nelse if (val<2.2) return [0.06,0.33,0.04];\nelse return [0,0.27,0];\n",
+    "dataset": {
+      "@id": "https://services.sentinel-hub.com/configuration/v1/datasets/S3OLCI"
+    },
+    "baseProduct": "OTCI",
+    "visualization": "RGB"
+  },
+  {
+    "@id": "https://services.sentinel-hub.com/configuration/v1/datasets/S3OLCI/dataproducts/597",
+    "id": 597,
+    "name": "TRISTIMULUS.RGB",
+    "description": "Tristimulus",
+    "evalScript": "var red = Math.log(1.0 + 0.01 * B01 + 0.09 * B02+ 0.35 * B03 + 0.04 * B04 + 0.01 * B05 + 0.59 * B06 + 0.85 * B07 + 0.12 * B08 + 0.07 * B09 + 0.04 * B10);\nvar green= Math.log(1.0 + 0.26 * B03 + 0.21 *B04 + 0.50 * B05 + B06 + 0.38 * B07 + 0.04 * B08 + 0.03 * B09 + 0.02 * B10);\nvar blue= Math.log(1.0 + 0.07 * B01 + 0.28 * B02 + 1.77 * B03 + 0.47 * B04 + 0.16 * B05);\n\nreturn [red,green,blue];",
+    "dataset": {
+      "@id": "https://services.sentinel-hub.com/configuration/v1/datasets/S3OLCI"
+    },
+    "baseProduct": "TRISTIMULUS",
+    "visualization": "RGB"
+  },
+  {
+    "@id": "https://services.sentinel-hub.com/configuration/v1/datasets/S3OLCI/dataproducts/598",
+    "id": 598,
+    "name": "B01.REFLECTANCE",
+    "description": "B01 - reflectance",
+    "evalScript": "function evaluatePixel(samples) {\n    return [samples[0].B01];\n}\n\nfunction setup(ds) {\n    setInputComponents([ds.B01]);\n    setOutputComponentCount(1);\n}",
+    "dataset": {
+      "@id": "https://services.sentinel-hub.com/configuration/v1/datasets/S3OLCI"
+    },
+    "baseProduct": "B01",
+    "visualization": "REFLECTANCE"
+  },
+  {
+    "@id": "https://services.sentinel-hub.com/configuration/v1/datasets/S3OLCI/dataproducts/599",
+    "id": 599,
+    "name": "B02.REFLECTANCE",
+    "description": "B02 - reflectance",
+    "evalScript": "function evaluatePixel(samples) {\n    return [samples[0].B02];\n}\n\nfunction setup(ds) {\n    setInputComponents([ds.B02]);\n    setOutputComponentCount(1);\n}",
+    "dataset": {
+      "@id": "https://services.sentinel-hub.com/configuration/v1/datasets/S3OLCI"
+    },
+    "baseProduct": "B02",
+    "visualization": "REFLECTANCE"
+  },
+  {
+    "@id": "https://services.sentinel-hub.com/configuration/v1/datasets/S3OLCI/dataproducts/600",
+    "id": 600,
+    "name": "B03.REFLECTANCE",
+    "description": "B03 - reflectance",
+    "evalScript": "function evaluatePixel(samples) {\n    return [samples[0].B03];\n}\n\nfunction setup(ds) {\n    setInputComponents([ds.B03]);\n    setOutputComponentCount(1);\n}",
+    "dataset": {
+      "@id": "https://services.sentinel-hub.com/configuration/v1/datasets/S3OLCI"
+    },
+    "baseProduct": "B03",
+    "visualization": "REFLECTANCE"
+  },
+  {
+    "@id": "https://services.sentinel-hub.com/configuration/v1/datasets/S3OLCI/dataproducts/602",
+    "id": 602,
+    "name": "B04.REFLECTANCE",
+    "description": "B04 - reflectance",
+    "evalScript": "function evaluatePixel(samples) {\n    return [samples[0].B04];\n}\n\nfunction setup(ds) {\n    setInputComponents([ds.B04]);\n    setOutputComponentCount(1);\n}",
+    "dataset": {
+      "@id": "https://services.sentinel-hub.com/configuration/v1/datasets/S3OLCI"
+    },
+    "baseProduct": "B04",
+    "visualization": "REFLECTANCE"
+  },
+  {
+    "@id": "https://services.sentinel-hub.com/configuration/v1/datasets/S3OLCI/dataproducts/603",
+    "id": 603,
+    "name": "B05.REFLECTANCE",
+    "description": "B05 - reflectance",
+    "evalScript": "function evaluatePixel(samples) {\n    return [samples[0].B05];\n}\n\nfunction setup(ds) {\n    setInputComponents([ds.B05]);\n    setOutputComponentCount(1);\n}",
+    "dataset": {
+      "@id": "https://services.sentinel-hub.com/configuration/v1/datasets/S3OLCI"
+    },
+    "baseProduct": "B05",
+    "visualization": "REFLECTANCE"
+  },
+  {
+    "@id": "https://services.sentinel-hub.com/configuration/v1/datasets/S3OLCI/dataproducts/604",
+    "id": 604,
+    "name": "B06.REFLECTANCE",
+    "description": "B06 - reflectance",
+    "evalScript": "function evaluatePixel(samples) {\n    return [samples[0].B06];\n}\n\nfunction setup(ds) {\n    setInputComponents([ds.B06]);\n    setOutputComponentCount(1);\n}",
+    "dataset": {
+      "@id": "https://services.sentinel-hub.com/configuration/v1/datasets/S3OLCI"
+    },
+    "baseProduct": "B06",
+    "visualization": "REFLECTANCE"
+  },
+  {
+    "@id": "https://services.sentinel-hub.com/configuration/v1/datasets/S3OLCI/dataproducts/605",
+    "id": 605,
+    "name": "B07.REFLECTANCE",
+    "description": "B07 - reflectance",
+    "evalScript": "function evaluatePixel(samples) {\n    return [samples[0].B07];\n}\n\nfunction setup(ds) {\n    setInputComponents([ds.B07]);\n    setOutputComponentCount(1);\n}",
+    "dataset": {
+      "@id": "https://services.sentinel-hub.com/configuration/v1/datasets/S3OLCI"
+    },
+    "baseProduct": "B07",
+    "visualization": "REFLECTANCE"
+  },
+  {
+    "@id": "https://services.sentinel-hub.com/configuration/v1/datasets/S3OLCI/dataproducts/606",
+    "id": 606,
+    "name": "B08.REFLECTANCE",
+    "description": "B08 - reflectance",
+    "evalScript": "function evaluatePixel(samples) {\n    return [samples[0].B08];\n}\n\nfunction setup(ds) {\n    setInputComponents([ds.B08]);\n    setOutputComponentCount(1);\n}",
+    "dataset": {
+      "@id": "https://services.sentinel-hub.com/configuration/v1/datasets/S3OLCI"
+    },
+    "baseProduct": "B08",
+    "visualization": "REFLECTANCE"
+  },
+  {
+    "@id": "https://services.sentinel-hub.com/configuration/v1/datasets/S3OLCI/dataproducts/607",
+    "id": 607,
+    "name": "B09.REFLECTANCE",
+    "description": "B09 - reflectance",
+    "evalScript": "function evaluatePixel(samples) {\n    return [samples[0].B09];\n}\n\nfunction setup(ds) {\n    setInputComponents([ds.B09]);\n    setOutputComponentCount(1);\n}",
+    "dataset": {
+      "@id": "https://services.sentinel-hub.com/configuration/v1/datasets/S3OLCI"
+    },
+    "baseProduct": "B09",
+    "visualization": "REFLECTANCE"
+  },
+  {
+    "@id": "https://services.sentinel-hub.com/configuration/v1/datasets/S3OLCI/dataproducts/608",
+    "id": 608,
+    "name": "B10.REFLECTANCE",
+    "description": "B10 - reflectance",
+    "evalScript": "function evaluatePixel(samples) {\n    return [samples[0].B10];\n}\n\nfunction setup(ds) {\n    setInputComponents([ds.B10]);\n    setOutputComponentCount(1);\n}",
+    "dataset": {
+      "@id": "https://services.sentinel-hub.com/configuration/v1/datasets/S3OLCI"
+    },
+    "baseProduct": "B10",
+    "visualization": "REFLECTANCE"
+  },
+  {
+    "@id": "https://services.sentinel-hub.com/configuration/v1/datasets/S3OLCI/dataproducts/609",
+    "id": 609,
+    "name": "B11.REFLECTANCE",
+    "description": "B11 - reflectance",
+    "evalScript": "function evaluatePixel(samples) {\n    return [samples[0].B11];\n}\n\nfunction setup(ds) {\n    setInputComponents([ds.B11]);\n    setOutputComponentCount(1);\n}",
+    "dataset": {
+      "@id": "https://services.sentinel-hub.com/configuration/v1/datasets/S3OLCI"
+    },
+    "baseProduct": "B11",
+    "visualization": "REFLECTANCE"
+  },
+  {
+    "@id": "https://services.sentinel-hub.com/configuration/v1/datasets/S3OLCI/dataproducts/610",
+    "id": 610,
+    "name": "B12.REFLECTANCE",
+    "description": "B12 - reflectance",
+    "evalScript": "function evaluatePixel(samples) {\n    return [samples[0].B12];\n}\n\nfunction setup(ds) {\n    setInputComponents([ds.B12]);\n    setOutputComponentCount(1);\n}",
+    "dataset": {
+      "@id": "https://services.sentinel-hub.com/configuration/v1/datasets/S3OLCI"
+    },
+    "baseProduct": "B12",
+    "visualization": "REFLECTANCE"
+  },
+  {
+    "@id": "https://services.sentinel-hub.com/configuration/v1/datasets/S3OLCI/dataproducts/611",
+    "id": 611,
+    "name": "B13.REFLECTANCE",
+    "description": "B13 - reflectance",
+    "evalScript": "function evaluatePixel(samples) {\n    return [samples[0].B13];\n}\n\nfunction setup(ds) {\n    setInputComponents([ds.B13]);\n    setOutputComponentCount(1);\n}",
+    "dataset": {
+      "@id": "https://services.sentinel-hub.com/configuration/v1/datasets/S3OLCI"
+    },
+    "baseProduct": "B13",
+    "visualization": "REFLECTANCE"
+  },
+  {
+    "@id": "https://services.sentinel-hub.com/configuration/v1/datasets/S3OLCI/dataproducts/612",
+    "id": 612,
+    "name": "B14.REFLECTANCE",
+    "description": "B14 - reflectance",
+    "evalScript": "function evaluatePixel(samples) {\n    return [samples[0].B14];\n}\n\nfunction setup(ds) {\n    setInputComponents([ds.B14]);\n    setOutputComponentCount(1);\n}",
+    "dataset": {
+      "@id": "https://services.sentinel-hub.com/configuration/v1/datasets/S3OLCI"
+    },
+    "baseProduct": "B14",
+    "visualization": "REFLECTANCE"
+  },
+  {
+    "@id": "https://services.sentinel-hub.com/configuration/v1/datasets/S3OLCI/dataproducts/613",
+    "id": 613,
+    "name": "B15.REFLECTANCE",
+    "description": "B15 - reflectance",
+    "evalScript": "function evaluatePixel(samples) {\n    return [samples[0].B15];\n}\n\nfunction setup(ds) {\n    setInputComponents([ds.B15]);\n    setOutputComponentCount(1);\n}",
+    "dataset": {
+      "@id": "https://services.sentinel-hub.com/configuration/v1/datasets/S3OLCI"
+    },
+    "baseProduct": "B15",
+    "visualization": "REFLECTANCE"
+  },
+  {
+    "@id": "https://services.sentinel-hub.com/configuration/v1/datasets/S3OLCI/dataproducts/614",
+    "id": 614,
+    "name": "B16.REFLECTANCE",
+    "description": "B16 - reflectance",
+    "evalScript": "function evaluatePixel(samples) {\n    return [samples[0].B16];\n}\n\nfunction setup(ds) {\n    setInputComponents([ds.B16]);\n    setOutputComponentCount(1);\n}",
+    "dataset": {
+      "@id": "https://services.sentinel-hub.com/configuration/v1/datasets/S3OLCI"
+    },
+    "baseProduct": "B16",
+    "visualization": "REFLECTANCE"
+  },
+  {
+    "@id": "https://services.sentinel-hub.com/configuration/v1/datasets/S3OLCI/dataproducts/615",
+    "id": 615,
+    "name": "B17.REFLECTANCE",
+    "description": "B17 - reflectance",
+    "evalScript": "function evaluatePixel(samples) {\n    return [samples[0].B17];\n}\n\nfunction setup(ds) {\n    setInputComponents([ds.B17]);\n    setOutputComponentCount(1);\n}",
+    "dataset": {
+      "@id": "https://services.sentinel-hub.com/configuration/v1/datasets/S3OLCI"
+    },
+    "baseProduct": "B17",
+    "visualization": "REFLECTANCE"
+  },
+  {
+    "@id": "https://services.sentinel-hub.com/configuration/v1/datasets/S3OLCI/dataproducts/616",
+    "id": 616,
+    "name": "B18.REFLECTANCE",
+    "description": "B18 - reflectance",
+    "evalScript": "function evaluatePixel(samples) {\n    return [samples[0].B18];\n}\n\nfunction setup(ds) {\n    setInputComponents([ds.B18]);\n    setOutputComponentCount(1);\n}",
+    "dataset": {
+      "@id": "https://services.sentinel-hub.com/configuration/v1/datasets/S3OLCI"
+    },
+    "baseProduct": "B18",
+    "visualization": "REFLECTANCE"
+  },
+  {
+    "@id": "https://services.sentinel-hub.com/configuration/v1/datasets/S3OLCI/dataproducts/617",
+    "id": 617,
+    "name": "B19.REFLECTANCE",
+    "description": "B19 - reflectance",
+    "evalScript": "function evaluatePixel(samples) {\n    return [samples[0].B19];\n}\n\nfunction setup(ds) {\n    setInputComponents([ds.B19]);\n    setOutputComponentCount(1);\n}",
+    "dataset": {
+      "@id": "https://services.sentinel-hub.com/configuration/v1/datasets/S3OLCI"
+    },
+    "baseProduct": "B19",
+    "visualization": "REFLECTANCE"
+  },
+  {
+    "@id": "https://services.sentinel-hub.com/configuration/v1/datasets/S3OLCI/dataproducts/618",
+    "id": 618,
+    "name": "B20.REFLECTANCE",
+    "description": "B20 - reflectance",
+    "evalScript": "function evaluatePixel(samples) {\n    return [samples[0].B20];\n}\n\nfunction setup(ds) {\n    setInputComponents([ds.B20]);\n    setOutputComponentCount(1);\n}",
+    "dataset": {
+      "@id": "https://services.sentinel-hub.com/configuration/v1/datasets/S3OLCI"
+    },
+    "baseProduct": "B20",
+    "visualization": "REFLECTANCE"
+  },
+  {
+    "@id": "https://services.sentinel-hub.com/configuration/v1/datasets/S3OLCI/dataproducts/619",
+    "id": 619,
+    "name": "B21.REFLECTANCE",
+    "description": "B21 - reflectance",
+    "evalScript": "function evaluatePixel(samples) {\n    return [samples[0].B21];\n}\n\nfunction setup(ds) {\n    setInputComponents([ds.B21]);\n    setOutputComponentCount(1);\n}",
+    "dataset": {
+      "@id": "https://services.sentinel-hub.com/configuration/v1/datasets/S3OLCI"
+    },
+    "baseProduct": "B21",
+    "visualization": "REFLECTANCE"
+  },
+  {
+    "@id": "https://services.sentinel-hub.com/configuration/v1/datasets/S3OLCI/dataproducts/621",
+    "id": 621,
+    "name": "B01.GRAYSCALE",
+    "description": "B01 - grayscale visualization",
+    "evalScript": "let minVal = 0.0;\nlet maxVal = 0.4;\n\nlet viz = new HighlightCompressVisualizerSingle(minVal, maxVal);\n\nfunction evaluatePixel(samples) {\n    let val = samples[0].B01;\n    return viz.process(val);\n}\n\nfunction setup(ds) {\n    setInputComponents([ds.B01]);\n    setOutputComponentCount(1);\n}",
+    "dataset": {
+      "@id": "https://services.sentinel-hub.com/configuration/v1/datasets/S3OLCI"
+    },
+    "baseProduct": "B01",
+    "visualization": "GRAYSCALE"
+  },
+  {
+    "@id": "https://services.sentinel-hub.com/configuration/v1/datasets/S3OLCI/dataproducts/622",
+    "id": 622,
+    "name": "B02.GRAYSCALE",
+    "description": "B02 - grayscale visualization",
+    "evalScript": "let minVal = 0.0;\nlet maxVal = 0.4;\n\nlet viz = new HighlightCompressVisualizerSingle(minVal, maxVal);\n\nfunction evaluatePixel(samples) {\n    let val = samples[0].B02;\n    return viz.process(val);\n}\n\nfunction setup(ds) {\n    setInputComponents([ds.B02]);\n    setOutputComponentCount(1);\n}",
+    "dataset": {
+      "@id": "https://services.sentinel-hub.com/configuration/v1/datasets/S3OLCI"
+    },
+    "baseProduct": "B02",
+    "visualization": "GRAYSCALE"
+  },
+  {
+    "@id": "https://services.sentinel-hub.com/configuration/v1/datasets/S3OLCI/dataproducts/623",
+    "id": 623,
+    "name": "B03.GRAYSCALE",
+    "description": "B03 - grayscale visualization",
+    "evalScript": "let minVal = 0.0;\nlet maxVal = 0.4;\n\nlet viz = new HighlightCompressVisualizerSingle(minVal, maxVal);\n\nfunction evaluatePixel(samples) {\n    let val = samples[0].B03;\n    return viz.process(val);\n}\n\nfunction setup(ds) {\n    setInputComponents([ds.B03]);\n    setOutputComponentCount(1);\n}",
+    "dataset": {
+      "@id": "https://services.sentinel-hub.com/configuration/v1/datasets/S3OLCI"
+    },
+    "baseProduct": "B03",
+    "visualization": "GRAYSCALE"
+  },
+  {
+    "@id": "https://services.sentinel-hub.com/configuration/v1/datasets/S3OLCI/dataproducts/624",
+    "id": 624,
+    "name": "B04.GRAYSCALE",
+    "description": "B04 - grayscale visualization",
+    "evalScript": "let minVal = 0.0;\nlet maxVal = 0.4;\n\nlet viz = new HighlightCompressVisualizerSingle(minVal, maxVal);\n\nfunction evaluatePixel(samples) {\n    let val = samples[0].B04;\n    return viz.process(val);\n}\n\nfunction setup(ds) {\n    setInputComponents([ds.B04]);\n    setOutputComponentCount(1);\n}",
+    "dataset": {
+      "@id": "https://services.sentinel-hub.com/configuration/v1/datasets/S3OLCI"
+    },
+    "baseProduct": "B04",
+    "visualization": "GRAYSCALE"
+  },
+  {
+    "@id": "https://services.sentinel-hub.com/configuration/v1/datasets/S3OLCI/dataproducts/625",
+    "id": 625,
+    "name": "B05.GRAYSCALE",
+    "description": "B05 - grayscale visualization",
+    "evalScript": "let minVal = 0.0;\nlet maxVal = 0.4;\n\nlet viz = new HighlightCompressVisualizerSingle(minVal, maxVal);\n\nfunction evaluatePixel(samples) {\n    let val = samples[0].B05;\n    return viz.process(val);\n}\n\nfunction setup(ds) {\n    setInputComponents([ds.B05]);\n    setOutputComponentCount(1);\n}",
+    "dataset": {
+      "@id": "https://services.sentinel-hub.com/configuration/v1/datasets/S3OLCI"
+    },
+    "baseProduct": "B05",
+    "visualization": "GRAYSCALE"
+  },
+  {
+    "@id": "https://services.sentinel-hub.com/configuration/v1/datasets/S3OLCI/dataproducts/626",
+    "id": 626,
+    "name": "B06.GRAYSCALE",
+    "description": "B06 - grayscale visualization",
+    "evalScript": "let minVal = 0.0;\nlet maxVal = 0.4;\n\nlet viz = new HighlightCompressVisualizerSingle(minVal, maxVal);\n\nfunction evaluatePixel(samples) {\n    let val = samples[0].B06;\n    return viz.process(val);\n}\n\nfunction setup(ds) {\n    setInputComponents([ds.B06]);\n    setOutputComponentCount(1);\n}",
+    "dataset": {
+      "@id": "https://services.sentinel-hub.com/configuration/v1/datasets/S3OLCI"
+    },
+    "baseProduct": "B06",
+    "visualization": "GRAYSCALE"
+  },
+  {
+    "@id": "https://services.sentinel-hub.com/configuration/v1/datasets/S3OLCI/dataproducts/627",
+    "id": 627,
+    "name": "B07.GRAYSCALE",
+    "description": "B07 - grayscale visualization",
+    "evalScript": "let minVal = 0.0;\nlet maxVal = 0.4;\n\nlet viz = new HighlightCompressVisualizerSingle(minVal, maxVal);\n\nfunction evaluatePixel(samples) {\n    let val = samples[0].B07;\n    return viz.process(val);\n}\n\nfunction setup(ds) {\n    setInputComponents([ds.B07]);\n    setOutputComponentCount(1);\n}",
+    "dataset": {
+      "@id": "https://services.sentinel-hub.com/configuration/v1/datasets/S3OLCI"
+    },
+    "baseProduct": "B07",
+    "visualization": "GRAYSCALE"
+  },
+  {
+    "@id": "https://services.sentinel-hub.com/configuration/v1/datasets/S3OLCI/dataproducts/628",
+    "id": 628,
+    "name": "B08.GRAYSCALE",
+    "description": "B08 - grayscale visualization",
+    "evalScript": "let minVal = 0.0;\nlet maxVal = 0.4;\n\nlet viz = new HighlightCompressVisualizerSingle(minVal, maxVal);\n\nfunction evaluatePixel(samples) {\n    let val = samples[0].B08;\n    return viz.process(val);\n}\n\nfunction setup(ds) {\n    setInputComponents([ds.B08]);\n    setOutputComponentCount(1);\n}",
+    "dataset": {
+      "@id": "https://services.sentinel-hub.com/configuration/v1/datasets/S3OLCI"
+    },
+    "baseProduct": "B08",
+    "visualization": "GRAYSCALE"
+  },
+  {
+    "@id": "https://services.sentinel-hub.com/configuration/v1/datasets/S3OLCI/dataproducts/629",
+    "id": 629,
+    "name": "B09.GRAYSCALE",
+    "description": "B09 - grayscale visualization",
+    "evalScript": "let minVal = 0.0;\nlet maxVal = 0.4;\n\nlet viz = new HighlightCompressVisualizerSingle(minVal, maxVal);\n\nfunction evaluatePixel(samples) {\n    let val = samples[0].B09;\n    return viz.process(val);\n}\n\nfunction setup(ds) {\n    setInputComponents([ds.B09]);\n    setOutputComponentCount(1);\n}",
+    "dataset": {
+      "@id": "https://services.sentinel-hub.com/configuration/v1/datasets/S3OLCI"
+    },
+    "baseProduct": "B09",
+    "visualization": "GRAYSCALE"
+  },
+  {
+    "@id": "https://services.sentinel-hub.com/configuration/v1/datasets/S3OLCI/dataproducts/630",
+    "id": 630,
+    "name": "B10.GRAYSCALE",
+    "description": "B10 - grayscale visualization",
+    "evalScript": "let minVal = 0.0;\nlet maxVal = 0.4;\n\nlet viz = new HighlightCompressVisualizerSingle(minVal, maxVal);\n\nfunction evaluatePixel(samples) {\n    let val = samples[0].B10;\n    return viz.process(val);\n}\n\nfunction setup(ds) {\n    setInputComponents([ds.B10]);\n    setOutputComponentCount(1);\n}",
+    "dataset": {
+      "@id": "https://services.sentinel-hub.com/configuration/v1/datasets/S3OLCI"
+    },
+    "baseProduct": "B10",
+    "visualization": "GRAYSCALE"
+  },
+  {
+    "@id": "https://services.sentinel-hub.com/configuration/v1/datasets/S3OLCI/dataproducts/631",
+    "id": 631,
+    "name": "B11.GRAYSCALE",
+    "description": "B11 - grayscale visualization",
+    "evalScript": "let minVal = 0.0;\nlet maxVal = 0.4;\n\nlet viz = new HighlightCompressVisualizerSingle(minVal, maxVal);\n\nfunction evaluatePixel(samples) {\n    let val = samples[0].B11;\n    return viz.process(val);\n}\n\nfunction setup(ds) {\n    setInputComponents([ds.B11]);\n    setOutputComponentCount(1);\n}",
+    "dataset": {
+      "@id": "https://services.sentinel-hub.com/configuration/v1/datasets/S3OLCI"
+    },
+    "baseProduct": "B11",
+    "visualization": "GRAYSCALE"
+  },
+  {
+    "@id": "https://services.sentinel-hub.com/configuration/v1/datasets/S3OLCI/dataproducts/632",
+    "id": 632,
+    "name": "B12.GRAYSCALE",
+    "description": "B12 - grayscale visualization",
+    "evalScript": "let minVal = 0.0;\nlet maxVal = 0.4;\n\nlet viz = new HighlightCompressVisualizerSingle(minVal, maxVal);\n\nfunction evaluatePixel(samples) {\n    let val = samples[0].B12;\n    return viz.process(val);\n}\n\nfunction setup(ds) {\n    setInputComponents([ds.B12]);\n    setOutputComponentCount(1);\n}",
+    "dataset": {
+      "@id": "https://services.sentinel-hub.com/configuration/v1/datasets/S3OLCI"
+    },
+    "baseProduct": "B12",
+    "visualization": "GRAYSCALE"
+  },
+  {
+    "@id": "https://services.sentinel-hub.com/configuration/v1/datasets/S3OLCI/dataproducts/633",
+    "id": 633,
+    "name": "B13.GRAYSCALE",
+    "description": "B13 - grayscale visualization",
+    "evalScript": "let minVal = 0.0;\nlet maxVal = 0.4;\n\nlet viz = new HighlightCompressVisualizerSingle(minVal, maxVal);\n\nfunction evaluatePixel(samples) {\n    let val = samples[0].B13;\n    return viz.process(val);\n}\n\nfunction setup(ds) {\n    setInputComponents([ds.B13]);\n    setOutputComponentCount(1);\n}",
+    "dataset": {
+      "@id": "https://services.sentinel-hub.com/configuration/v1/datasets/S3OLCI"
+    },
+    "baseProduct": "B13",
+    "visualization": "GRAYSCALE"
+  },
+  {
+    "@id": "https://services.sentinel-hub.com/configuration/v1/datasets/S3OLCI/dataproducts/634",
+    "id": 634,
+    "name": "B14.GRAYSCALE",
+    "description": "B14 - grayscale visualization",
+    "evalScript": "let minVal = 0.0;\nlet maxVal = 0.4;\n\nlet viz = new HighlightCompressVisualizerSingle(minVal, maxVal);\n\nfunction evaluatePixel(samples) {\n    let val = samples[0].B14;\n    return viz.process(val);\n}\n\nfunction setup(ds) {\n    setInputComponents([ds.B14]);\n    setOutputComponentCount(1);\n}",
+    "dataset": {
+      "@id": "https://services.sentinel-hub.com/configuration/v1/datasets/S3OLCI"
+    },
+    "baseProduct": "B14",
+    "visualization": "GRAYSCALE"
+  },
+  {
+    "@id": "https://services.sentinel-hub.com/configuration/v1/datasets/S3OLCI/dataproducts/635",
+    "id": 635,
+    "name": "B15.GRAYSCALE",
+    "description": "B15 - grayscale visualization",
+    "evalScript": "let minVal = 0.0;\nlet maxVal = 0.4;\n\nlet viz = new HighlightCompressVisualizerSingle(minVal, maxVal);\n\nfunction evaluatePixel(samples) {\n    let val = samples[0].B15;\n    return viz.process(val);\n}\n\nfunction setup(ds) {\n    setInputComponents([ds.B15]);\n    setOutputComponentCount(1);\n}",
+    "dataset": {
+      "@id": "https://services.sentinel-hub.com/configuration/v1/datasets/S3OLCI"
+    },
+    "baseProduct": "B15",
+    "visualization": "GRAYSCALE"
+  },
+  {
+    "@id": "https://services.sentinel-hub.com/configuration/v1/datasets/S3OLCI/dataproducts/636",
+    "id": 636,
+    "name": "B16.GRAYSCALE",
+    "description": "B16 - grayscale visualization",
+    "evalScript": "let minVal = 0.0;\nlet maxVal = 0.4;\n\nlet viz = new HighlightCompressVisualizerSingle(minVal, maxVal);\n\nfunction evaluatePixel(samples) {\n    let val = samples[0].B16;\n    return viz.process(val);\n}\n\nfunction setup(ds) {\n    setInputComponents([ds.B16]);\n    setOutputComponentCount(1);\n}",
+    "dataset": {
+      "@id": "https://services.sentinel-hub.com/configuration/v1/datasets/S3OLCI"
+    },
+    "baseProduct": "B16",
+    "visualization": "GRAYSCALE"
+  },
+  {
+    "@id": "https://services.sentinel-hub.com/configuration/v1/datasets/S3OLCI/dataproducts/637",
+    "id": 637,
+    "name": "B17.GRAYSCALE",
+    "description": "B17 - grayscale visualization",
+    "evalScript": "let minVal = 0.0;\nlet maxVal = 0.4;\n\nlet viz = new HighlightCompressVisualizerSingle(minVal, maxVal);\n\nfunction evaluatePixel(samples) {\n    let val = samples[0].B17;\n    return viz.process(val);\n}\n\nfunction setup(ds) {\n    setInputComponents([ds.B17]);\n    setOutputComponentCount(1);\n}",
+    "dataset": {
+      "@id": "https://services.sentinel-hub.com/configuration/v1/datasets/S3OLCI"
+    },
+    "baseProduct": "B17",
+    "visualization": "GRAYSCALE"
+  },
+  {
+    "@id": "https://services.sentinel-hub.com/configuration/v1/datasets/S3OLCI/dataproducts/638",
+    "id": 638,
+    "name": "B18.GRAYSCALE",
+    "description": "B18 - grayscale visualization",
+    "evalScript": "let minVal = 0.0;\nlet maxVal = 0.4;\n\nlet viz = new HighlightCompressVisualizerSingle(minVal, maxVal);\n\nfunction evaluatePixel(samples) {\n    let val = samples[0].B18;\n    return viz.process(val);\n}\n\nfunction setup(ds) {\n    setInputComponents([ds.B18]);\n    setOutputComponentCount(1);\n}",
+    "dataset": {
+      "@id": "https://services.sentinel-hub.com/configuration/v1/datasets/S3OLCI"
+    },
+    "baseProduct": "B18",
+    "visualization": "GRAYSCALE"
+  },
+  {
+    "@id": "https://services.sentinel-hub.com/configuration/v1/datasets/S3OLCI/dataproducts/639",
+    "id": 639,
+    "name": "B19.GRAYSCALE",
+    "description": "B19 - grayscale visualization",
+    "evalScript": "let minVal = 0.0;\nlet maxVal = 0.4;\n\nlet viz = new HighlightCompressVisualizerSingle(minVal, maxVal);\n\nfunction evaluatePixel(samples) {\n    let val = samples[0].B19;\n    return viz.process(val);\n}\n\nfunction setup(ds) {\n    setInputComponents([ds.B19]);\n    setOutputComponentCount(1);\n}",
+    "dataset": {
+      "@id": "https://services.sentinel-hub.com/configuration/v1/datasets/S3OLCI"
+    },
+    "baseProduct": "B19",
+    "visualization": "GRAYSCALE"
+  },
+  {
+    "@id": "https://services.sentinel-hub.com/configuration/v1/datasets/S3OLCI/dataproducts/640",
+    "id": 640,
+    "name": "B20.GRAYSCALE",
+    "description": "B20 - grayscale visualization",
+    "evalScript": "let minVal = 0.0;\nlet maxVal = 0.4;\n\nlet viz = new HighlightCompressVisualizerSingle(minVal, maxVal);\n\nfunction evaluatePixel(samples) {\n    let val = samples[0].B20;\n    return viz.process(val);\n}\n\nfunction setup(ds) {\n    setInputComponents([ds.B20]);\n    setOutputComponentCount(1);\n}",
+    "dataset": {
+      "@id": "https://services.sentinel-hub.com/configuration/v1/datasets/S3OLCI"
+    },
+    "baseProduct": "B20",
+    "visualization": "GRAYSCALE"
+  },
+  {
+    "@id": "https://services.sentinel-hub.com/configuration/v1/datasets/S3OLCI/dataproducts/641",
+    "id": 641,
+    "name": "B21.GRAYSCALE",
+    "description": "B21 - grayscale visualization",
+    "evalScript": "let minVal = 0.0;\nlet maxVal = 0.4;\n\nlet viz = new HighlightCompressVisualizerSingle(minVal, maxVal);\n\nfunction evaluatePixel(samples) {\n    let val = samples[0].B21;\n    return viz.process(val);\n}\n\nfunction setup(ds) {\n    setInputComponents([ds.B21]);\n    setOutputComponentCount(1);\n}",
+    "dataset": {
+      "@id": "https://services.sentinel-hub.com/configuration/v1/datasets/S3OLCI"
+    },
+    "baseProduct": "B21",
+    "visualization": "GRAYSCALE"
+  }
+]
